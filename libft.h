@@ -6,7 +6,7 @@
 /*   By: bteuling <boyteulings@gmail.com>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 14:38:53 by bteuling      #+#    #+#                 */
-/*   Updated: 2021/12/14 14:44:39 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/06/20 15:13:33 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,7 @@ char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
+int		ft_intlen(int n);
+char	*ft_itoa_base(int n, int base, char *base_string);
+int		ft_intlen_base(long long n, int base);
 #endif

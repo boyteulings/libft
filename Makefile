@@ -36,7 +36,12 @@ SRC = ft_bzero.c \
 	ft_itoa.c \
 	ft_striteri.c \
 	ft_strmapi.c \
-	ft_split.c
+	ft_split.c \
+	ft_intlen.c \
+	ft_itoa_base.c \
+	ft_intlen_base.c
+
+CPPFLAGS += -I ./
 
 OBJ = $(SRC:.c=.o)
 

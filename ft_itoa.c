@@ -6,30 +6,12 @@
 /*   By: bteuling <boyteulings@gmail.com>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 14:38:30 by bteuling      #+#    #+#                 */
-/*   Updated: 2021/12/15 14:32:46 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/06/17 17:53:05 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-// counts length of long n, if negative make n positive and +1 len
-static int	fn_intlen(long n)
-{
-	int	len;
-
-	len = 0;
-	if (n <= 0)
-	{
-		n = -n;
-		len++;
-	}
-	while (n > 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
+#include "libft.h"
 
 // converts int to char, if negative make long nbr positive
 // and set cnbr[0] to '-'.
@@ -39,15 +21,15 @@ char	*ft_itoa(int n)
 {
 	long	nbr;
 	char	*cnbr;
-	int		intlen;
+	int		len;
 
 	nbr = n;
-	intlen = fn_intlen(nbr);
-	cnbr = malloc((intlen + 1) * sizeof(char));
+	len = ft_intlen(nbr);
+	cnbr = malloc((len + 1) * sizeof(char));
 	if (cnbr == 0)
 		return (NULL);
-	cnbr[intlen] = '\0';
-	intlen--;
+	cnbr[len] = '\0';
+	len--;
 	if (nbr < 0)
 	{
 		cnbr[0] = '-';
@@ -55,11 +37,11 @@ char	*ft_itoa(int n)
 	}
 	else if (nbr == 0)
 		cnbr[0] = '0';
-	while (nbr > 0 && intlen >= 0)
+	while (nbr > 0 && len >= 0)
 	{
-		cnbr[intlen] = '0' + (nbr % 10);
+		cnbr[len] = '0' + (nbr % 10);
 		nbr /= 10;
-		intlen--;
+		len--;
 	}
 	return (cnbr);
 }
