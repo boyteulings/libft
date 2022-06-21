@@ -6,7 +6,7 @@
 /*   By: bteuling <boyteulings@gmail.com>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 14:41:12 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/06/21 15:02:21 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/06/21 17:32:58 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 /**
- * @brief Writes string to given file descriptor, and returns the amount of bytes written
+ * @brief Writes string to given file descriptor
  * 
  * @param s string to write
  * @param fd file descriptor to write to
