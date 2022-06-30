@@ -6,7 +6,7 @@
 /*   By: bteuling <bteuling@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/06/17 17:25:33 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/06/20 16:41:29 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/06/30 18:07:29 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @param base_string alphanumeric string which is the base used to convert n
  * @return char
  */
-char	*ft_itoa_base(long long n, int base, char *base_string)
+char	*ft_itoa_base(long long n, int base, const char *base_string)
 {
 	char	*converted_n;
 	int		len;
