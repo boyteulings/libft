@@ -39,7 +39,9 @@ SRC = ft_bzero.c \
 	ft_split.c \
 	ft_intlen.c \
 	ft_itoa_base.c \
-	ft_intlen_base.c
+	ft_intlen_base.c \
+	ft_utoa_base.c \
+	ft_uintlen_base.c
 
 CPPFLAGS += -I ./
 

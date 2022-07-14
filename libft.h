@@ -6,7 +6,7 @@
 /*   By: bteuling <boyteulings@gmail.com>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 14:38:53 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/06/30 18:10:06 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/07/14 15:21:53 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,6 @@ char	**ft_split(char const *s, char c);
 int		ft_intlen(int n);
 char	*ft_itoa_base(long long n, int base, const char *base_string);
 int		ft_intlen_base(long long n, int base);
+char	*ft_utoa_base(unsigned long long n, int base, const char *base_string);
+int		ft_uintlen_base(unsigned long long n, int base);
 #endif
