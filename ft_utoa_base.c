@@ -6,7 +6,7 @@
 /*   By: bteuling <bteuling@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/07/14 15:15:37 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/07/14 15:23:11 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/07/14 15:38:44 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
  */
 char	*ft_utoa_base(unsigned long long n, int base, const char *base_string)
 {
-	char			*converted_n;
-	unsigned int	len;
-	long			num;
+	char	*converted_n;
+	int		len;
+	long	num;
 
 	len = ft_intlen_base(n, base);
 	converted_n = malloc((len + 1) * sizeof(char));

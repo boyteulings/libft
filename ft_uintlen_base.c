@@ -6,7 +6,7 @@
 /*   By: bteuling <bteuling@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/07/14 15:15:28 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/07/14 15:23:32 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/07/14 15:37:14 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
  */
 int	ft_uintlen_base(unsigned long long n, int base)
 {
-	unsigned int	len;
+	int	len;
 
 	len = 0;
 	if (n == 0)
-		len++;
+		return (1);
 	while (n > 0)
 	{
 		n /= base;
