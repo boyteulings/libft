@@ -6,7 +6,7 @@
 /*   By: bteuling <bteuling@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/07/14 15:15:37 by bteuling      #+#    #+#                 */
-/*   Updated: 2022/07/14 16:03:53 by bteuling      ########   odam.nl         */
+/*   Updated: 2022/07/29 17:02:38 by bteuling      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,14 @@ char	*ft_utoa_base(unsigned long long n, int base, const char *base_string)
 	if (!converted_n || !base_string)
 		return (NULL);
 	converted_n[len] = '\0';
-	len--;
 	num = n;
 	if (n == 0)
 		converted_n[0] = '0';
 	while (num && len)
 	{
+		len--;
 		converted_n[len] = base_string[num % base];
 		num /= base;
-		len--;
 	}
 	return (converted_n);
 }
